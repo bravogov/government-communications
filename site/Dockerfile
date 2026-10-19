@@ -1,4 +1,4 @@
-FROM wordpress:6.8.3-php8.3-apache@sha256:30bff39330d1693b0ce13d32fc9b7bb67193064f040b7d60d3494e136fa599d4
+FROM wordpress:7.1.3-php8.3-apache@sha256:81a34254acaa6ff3b9a67268c2745e9a041c4094cbe5ccd35b75ed3bbdc033b5
 COPY theme /usr/src/wordpress/wp-content/themes/uh-gcs
 COPY plugins /usr/src/wordpress/wp-content/mu-plugins
 RUN a2enmod rewrite
