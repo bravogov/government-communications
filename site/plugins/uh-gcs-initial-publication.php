@@ -57,9 +57,9 @@ HTML],
 <p>Review your current responsibilities, identify the technical and professional skills you need, agree learning priorities with your manager where applicable, and put those skills into practice. Keep a record of the learning undertaken and reflect on improvements to your work.</p>
 <h2>Learning areas</h2>
 <ul>
-<li><a href="/communication-planning/">Communication planning</a> — setting objectives, understanding audiences and identifying the right approach.</li>
-<li><a href="/accessible-communication/">Accessible communication</a> — writing and publishing information that people can understand and use.</li>
-<li><a href="/evaluating-communications/">Evaluation</a> — assessing outputs, outcomes and the contribution of communications to policy or service objectives.</li>
+<li><a href="/publication/communication-planning/">Communication planning</a> — setting objectives, understanding audiences and identifying the right approach.</li>
+<li><a href="/publication/accessible-communication/">Accessible communication</a> — writing and publishing information that people can understand and use.</li>
+<li><a href="/publication/evaluating-communications/">Evaluation</a> — assessing outputs, outcomes and the contribution of communications to policy or service objectives.</li>
 <li><a href="/standards/">Professional standards</a> — ethics, propriety and accountability.</li>
 </ul>
 <h2>Learning in practice</h2>
@@ -81,34 +81,12 @@ HTML],
 HTML],
         'resources' => ['Resources and guidance', <<<'HTML'
 <p><strong>Professional tools, guidance and insights.</strong> Use these resources to support government communications at every stage, from planning and production to publication and evaluation.</p>
-<h2>Planning, delivery and measurement</h2>
-<ul><li><a href="/communication-planning/">Plan a communication activity</a> — objectives, audiences, strategy, delivery and assessment.</li><li><a href="/evaluating-communications/">Evaluate government communications</a> — record evidence, measure outcomes and improve delivery.</li><li><a href="/accessible-communication/">Publish accessible communication</a> — content and format considerations for public information.</li></ul>
+<h2>Planning, delivery and measurement</h2><p><a href="/publication/">Browse all publications and guidance</a>.</p>
+<ul><li><a href="/publication/communication-planning/">Plan a communication activity</a> — objectives, audiences, strategy, delivery and assessment.</li><li><a href="/publication/evaluating-communications/">Evaluate government communications</a> — record evidence, measure outcomes and improve delivery.</li><li><a href="/publication/accessible-communication/">Publish accessible communication</a> — content and format considerations for public information.</li></ul>
 <h2>Professional conduct and capability</h2>
 <ul><li><a href="/standards/">Government communications standards</a>.</li><li><a href="/learning/">Learning and professional development</a>.</li><li><a href="/careers/">Careers and recruitment routes</a>.</li></ul>
 <h2>Official government material</h2>
 <p>For departmental policy, operational procedures, government publications and services, use the responsible organisation's authoritative website and the <a href="https://www.gov.uhrblx.com/">GOV.UH</a> publication estate. Professional guidance on this site does not replace legislation or departmental operational instructions.</p>
-HTML],
-        'communication-planning' => ['Communication planning', <<<'HTML'
-<p><strong>Plan communications around a clear public purpose.</strong> Communication should support a legitimate policy, service or public-information need and be designed around the people who need the information.</p>
-<h2>Objectives</h2><p>Start with the outcome the organisation is trying to achieve. Describe the change in awareness, understanding or behaviour sought, who has authorised the activity and how results will be assessed.</p>
-<h2>Audience</h2><p>Identify those who need to know or act. Consider evidence about their needs, accessibility, language, channels and barriers to understanding. Do not assume that every audience uses the same services or platforms.</p>
-<h2>Strategy and approach</h2><p>Choose a proportionate approach based on evidence and the public purpose. Specify responsibilities, messages, tone, channels, timing, approvals and risks.</p>
-<h2>Implementation</h2><p>Prepare content, check facts and claims, secure approvals, publish through the authoritative channels and maintain a record of what was communicated.</p>
-<h2>Scoring and evaluation</h2><p>Identify useful measures before publication. Assess reach, understanding, engagement or uptake as appropriate, and record lessons for subsequent communication.</p>
-HTML],
-        'evaluating-communications' => ['Evaluating communications', <<<'HTML'
-<p><strong>Effective evaluation demonstrates what communications achieved.</strong> Plan evaluation before implementation and use evidence to improve future activity.</p>
-<h2>Begin with the objective</h2><p>Make clear what communication is expected to contribute to a policy, operational or service result. Distinguish activities carried out from changes in public understanding or behaviour.</p>
-<h2>Choose proportionate measures</h2><p>Useful information may include audience research, accessibility testing, content performance, enquiries, service use, feedback and outcome measures. Use lawful, reliable information and avoid collecting unnecessary personal data.</p>
-<h2>Interpret results</h2><p>Examine what the evidence supports and what it does not. Other policy changes, service delivery and wider events may also affect outcomes. Communicate limitations and uncertainty clearly.</p>
-<h2>Record and improve</h2><p>Report results to the responsible organisation and use the findings to improve future plans and content. Keep the records required by its information-management arrangements.</p>
-HTML],
-        'accessible-communication' => ['Accessible communication', <<<'HTML'
-<p><strong>Public information should be easy to find, understand and use.</strong> Accessibility is part of professional communications planning, production and assurance.</p>
-<h2>Clear content</h2><p>Use plain language, informative headings and descriptive links. Explain specialist terms and communicate decisions, eligibility, procedures and actions precisely. Consider users who have literacy, communication, cognitive or other access needs.</p>
-<h2>Accessible digital material</h2><p>Use semantic HTML, sufficient colour contrast, text alternatives for informative images and correctly labelled forms. Avoid publishing information only in inaccessible images or PDFs where accessible HTML would be appropriate.</p>
-<h2>Review and testing</h2><p>Check content across devices and with keyboard navigation and assistive technology where possible. Respond to accessibility feedback and keep the published edition under review.</p>
-<h2>Authoritative publication</h2><p>Use the responsible department's or service's approved publication route; professional communication advice does not create an alternative official records estate.</p>
 HTML],
         'contact' => ['Contact Government Communications', <<<'HTML'
 <p>The Government Communication Service provides professional guidance, standards and coordination for government communications.</p>

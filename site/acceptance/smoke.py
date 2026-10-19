@@ -18,10 +18,11 @@ PATHS = [
     ("/contact/", "Contact Government Communications"),
     ("/accessibility/", "Accessibility statement"),
     ("/privacy/", "Privacy and cookies"),
-    ("/communication-planning/", "Communication planning"),
-    ("/evaluating-communications/", "Evaluating communications"),
-    ("/accessible-communication/", "Accessible communication"),
+    ("/publication/communication-planning/", "Communication planning"),
+    ("/publication/evaluating-communications/", "Evaluating communications"),
+    ("/publication/accessible-communication/", "Accessible communication"),
     ("/news/", "News"),
+    ("/publication/", "Publications"),
     ("/?s=communications", "Search results"),
 ]
 class Headings(HTMLParser):
