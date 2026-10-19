@@ -1,0 +1,1 @@
+<?php get_header(); ?><main id="main" class="not-found"><div class="wrap section"><h1>Page not found</h1><p>The page you requested does not exist or may have moved.</p><p><a href="<?php echo esc_url(home_url('/')); ?>">Return to the Government Communications homepage</a>.</p></div></main><?php get_footer(); ?>

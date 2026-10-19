@@ -1,0 +1,59 @@
+name: uh-gcs-professional
+services:
+  database:
+    image: mariadb:11.8@sha256:6422478cb8e159f080fb1d8ccf65101e26fe51385787fde7d16c3b165a331f15
+    restart: unless-stopped
+    environment:
+      MARIADB_DATABASE: gcs_wp
+      MARIADB_USER: gcs_wp
+      MARIADB_PASSWORD: ${GCS_DB_PASSWORD:?Set strong GCS_DB_PASSWORD in Coolify}
+      MARIADB_ROOT_PASSWORD: ${GCS_DB_ROOT_PASSWORD:?Set GCS_DB_ROOT_PASSWORD in Coolify}
+    volumes:
+      - gcs_db:/var/lib/mysql
+    networks: [gcs_internal]
+    healthcheck:
+      test: ["CMD-SHELL","healthcheck.sh --connect --innodb_initialized"]
+      interval: 15s
+      timeout: 10s
+      retries: 15
+  wordpress:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      database:
+        condition: service_healthy
+    environment:
+      WORDPRESS_DB_HOST: database:3306
+      WORDPRESS_DB_NAME: gcs_wp
+      WORDPRESS_DB_USER: gcs_wp
+      WORDPRESS_DB_PASSWORD: ${GCS_DB_PASSWORD:?Set GCS_DB_PASSWORD in Coolify}
+      WORDPRESS_TABLE_PREFIX: gcs_
+      WORDPRESS_CONFIG_EXTRA: |
+        define('WP_HOME', 'https://gcs.civilservice.gov.uhrblx.com');
+        define('WP_SITEURL', 'https://gcs.civilservice.gov.uhrblx.com');
+        define('DISALLOW_FILE_EDIT', true);
+        define('DISALLOW_FILE_MODS', true);
+        define('WP_AUTO_UPDATE_CORE', false);
+        define('AUTOMATIC_UPDATER_DISABLED', true);
+        if (isset($$_SERVER['HTTP_X_FORWARDED_PROTO']) && $$_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
+            $$_SERVER['HTTPS'] = 'on';
+        }
+    volumes:
+      - gcs_uploads:/var/www/html/wp-content/uploads
+    expose: ["80"]
+    ports:
+      - "127.0.0.1:45836:80"
+    networks: [gcs_internal]
+    healthcheck:
+      test: ["CMD-SHELL","php -r '$$s=@fsockopen(\"127.0.0.1\",80,$$e,$$m,5);exit($$s?0:1);'"]
+      interval: 30s
+      timeout: 8s
+      retries: 10
+volumes:
+  gcs_db:
+  gcs_uploads:
+networks:
+  gcs_internal:
+    driver: bridge

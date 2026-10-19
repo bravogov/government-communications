@@ -1,0 +1,5 @@
+<footer class="footer"><div class="wrap"><div class="footer-grid">
+<div><h2>Government Communications</h2><p>Professional support, learning and standards for communicators in United Hampshire's Civil Service.</p><p>Published by the Government Communication Service, part of the Civil Service. Cabinet Office provides central professional leadership.</p></div>
+<div><h2>Useful information</h2><ul><li><a href="<?php echo esc_url(home_url('/contact/')); ?>">Contact</a></li><li><a href="<?php echo esc_url(home_url('/accessibility/')); ?>">Accessibility</a></li><li><a href="<?php echo esc_url(home_url('/privacy/')); ?>">Privacy and cookies</a></li><li><a href="https://www.gov.uhrblx.com/government/organisations/government-communication-service">GOV.UH organisation page</a></li></ul></div>
+</div><p class="smallprint">© UH Crown copyright for original UH material, except where otherwise stated. United Hampshire is a fictional digital civic community inspired by United Kingdom institutions; this site is not an official UK government website.</p></div></footer>
+<?php wp_footer(); ?></body></html>
