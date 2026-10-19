@@ -58,7 +58,7 @@ HTML],
 <h2>Learning areas</h2>
 <ul>
 <li><a href="/publication/communication-planning/">Communication planning</a> — setting objectives, understanding audiences and identifying the right approach.</li>
-<li><a href="/publication/accessible-communication/">Accessible communication</a> — writing and publishing information that people can understand and use.</li>
+<li><a href="/publication/accessible-communications/">Accessible communication</a> — writing and publishing information that people can understand and use.</li>
 <li><a href="/publication/evaluating-communications/">Evaluation</a> — assessing outputs, outcomes and the contribution of communications to policy or service objectives.</li>
 <li><a href="/standards/">Professional standards</a> — ethics, propriety and accountability.</li>
 </ul>
@@ -82,7 +82,7 @@ HTML],
         'resources' => ['Resources and guidance', <<<'HTML'
 <p><strong>Professional tools, guidance and insights.</strong> Use these resources to support government communications at every stage, from planning and production to publication and evaluation.</p>
 <h2>Planning, delivery and measurement</h2><p><a href="/publication/">Browse all publications and guidance</a>.</p>
-<ul><li><a href="/publication/communication-planning/">Plan a communication activity</a> — objectives, audiences, strategy, delivery and assessment.</li><li><a href="/publication/evaluating-communications/">Evaluate government communications</a> — record evidence, measure outcomes and improve delivery.</li><li><a href="/publication/accessible-communication/">Publish accessible communication</a> — content and format considerations for public information.</li></ul>
+<ul><li><a href="/publication/communication-planning/">Plan a communication activity</a> — objectives, audiences, strategy, delivery and assessment.</li><li><a href="/publication/evaluating-communications/">Evaluate government communications</a> — record evidence, measure outcomes and improve delivery.</li><li><a href="/publication/accessible-communications/">Publish accessible communication</a> — content and format considerations for public information.</li></ul>
 <h2>Professional conduct and capability</h2>
 <ul><li><a href="/standards/">Government communications standards</a>.</li><li><a href="/learning/">Learning and professional development</a>.</li><li><a href="/careers/">Careers and recruitment routes</a>.</li></ul>
 <h2>Official government material</h2>

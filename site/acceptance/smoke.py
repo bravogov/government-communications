@@ -20,7 +20,7 @@ PATHS = [
     ("/privacy/", "Privacy and cookies"),
     ("/publication/communication-planning/", "Communication planning"),
     ("/publication/evaluating-communications/", "Evaluating communications"),
-    ("/publication/accessible-communication/", "Accessible communication"),
+    ("/publication/accessible-communications/", "Accessible communication"),
     ("/news/", "News"),
     ("/publication/", "Publications"),
     ("/?s=communications", "Search results"),
