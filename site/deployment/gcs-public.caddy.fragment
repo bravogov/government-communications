@@ -1,0 +1,6 @@
+# Not enabled automatically: activate only after private installation, content approval,
+# authoritative DNS agreement, Caddy validation and HTTPS acceptance.
+gcs.civilservice.gov.uhrblx.com {
+  import common
+  reverse_proxy 127.0.0.1:45836
+}

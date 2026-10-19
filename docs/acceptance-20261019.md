@@ -23,10 +23,14 @@ Current development branch: `feature/professional-website`. The public GCS site 
 
 ## Public production acceptance
 
-This is not public completion. Required before release: UK comparator editorial and UH functional review; secure native CMS administration; Coolify resource registered through the existing authorised deployment authority using an immutable **Forgejo main SHA** until the controlling production-source migration is completed; separate database and product-local backup/restore; DNS answers from both authoritative servers; HTTPS and Caddy public routing; canonical website and editor regression; recorded release and rollback evidence. Only then update the existing Accord GCS About us website link.
+This is not public completion. Required before release: UK comparator editorial and UH functional review; secure native CMS administration; native GCS deployment from an immutable **BravoGov GitHub main SHA**, without Coolify or Forgejo; separate database and product-local backup/restore; DNS answers from both authoritative servers; HTTPS and Caddy public routing; canonical website and editor regression; recorded release and rollback evidence. Only then update the existing Accord GCS About us website link.
 
 No test passwords, database dumps, deployment tokens or administrator secrets are stored in this repository.
 
 ## Additional canonical-link regression
 
 After correcting the accessible-communications publication to its actual plural canonical slug, all **17 distinct internal link destinations** in the 13-page isolated content crawl returned **HTTP 200**, with no unresolved internal links or unexpected redirects. Corrected the source seeder and public HTTPS smoke assertion; the existing QA CMS draft pages were amended through their native WordPress editor for readback. No public domain was changed.
+
+## Source-control correction, 19 October 2026
+
+The GCS source of authority is **bravogov/government-communications on GitHub**. The previous Coolify/Forgejo deployment text above is superseded. The isolated testing is retained as evidence only; public production acceptance is not claimed.

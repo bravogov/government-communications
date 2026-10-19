@@ -6,8 +6,8 @@ services:
     environment:
       MARIADB_DATABASE: gcs_wp
       MARIADB_USER: gcs_wp
-      MARIADB_PASSWORD: ${GCS_DB_PASSWORD:?Set strong GCS_DB_PASSWORD in Coolify}
-      MARIADB_ROOT_PASSWORD: ${GCS_DB_ROOT_PASSWORD:?Set GCS_DB_ROOT_PASSWORD in Coolify}
+      MARIADB_PASSWORD: ${GCS_DB_PASSWORD:?Set GCS_DB_PASSWORD in root-only native GCS environment}
+      MARIADB_ROOT_PASSWORD: ${GCS_DB_ROOT_PASSWORD:?Set GCS_DB_ROOT_PASSWORD in root-only native GCS environment}
     volumes:
       - gcs_db:/var/lib/mysql
     networks: [gcs_internal]
@@ -17,6 +17,7 @@ services:
       timeout: 10s
       retries: 15
   wordpress:
+    image: uh/gcs-professional:${GCS_RELEASE_SHA:?Exact approved BravoGov GitHub release SHA required}
     build:
       context: .
       dockerfile: Dockerfile
@@ -28,7 +29,7 @@ services:
       WORDPRESS_DB_HOST: database:3306
       WORDPRESS_DB_NAME: gcs_wp
       WORDPRESS_DB_USER: gcs_wp
-      WORDPRESS_DB_PASSWORD: ${GCS_DB_PASSWORD:?Set GCS_DB_PASSWORD in Coolify}
+      WORDPRESS_DB_PASSWORD: ${GCS_DB_PASSWORD:?Set GCS_DB_PASSWORD in root-only native GCS environment}
       WORDPRESS_TABLE_PREFIX: gcs_
       WORDPRESS_CONFIG_EXTRA: |
         define('WP_HOME', 'https://gcs.civilservice.gov.uhrblx.com');

@@ -16,13 +16,15 @@ GOV.UH Accord remains the authoritative publisher of the Government Communicatio
 
 ## Source and institutional controls
 
-Code is maintained in the BravoGov GitHub organisation. Production currently remains controlled by the operative Forgejo/Coolify source-and-release instructions until the reviewed migration of production authority is complete. A GitHub commit alone is neither a deployment receipt nor a claim that the public website works. **Do not activate a second production release chain.**
+**BravoGov GitHub is the authoritative source of GCS application code and approved release revisions.** GCS must not be deployed from Forgejo or through Coolify. The OVH VPS downloads and verifies the exact approved revision from this GitHub repository and runs the private WordPress/MariaDB containers through its native Docker runtime. This does not modify the deployment systems of other UH sites. GitHub source control and VPS runtime have separate responsibilities; a GitHub commit alone is not proof of a production deployment.
 
 The attached site candidate is an editable WordPress application with a dedicated theme and separate database. It is not automatically approved for publication; restore UK comparator fidelity in presentation and actual content before first public deployment. The reviewed X-GOVUK GOV.UK Eleventy plugin is useful for static professional guidance or project documentation, but does not substitute for an authenticated CMS or a member directory. Do not use UK Royal Arms, GOV.UK's crown/logotype or UK-only accounts. See docs/comparator-contract.md.
 
 ## Source layout
 
 - `site/`: WordPress application, independent MariaDB service, native editorial theme, and initial draft content.
+- `site/deployment/native-release.sh`: validates GitHub main revision and prepares/deploys an immutable GCS runtime on OVH without Forgejo or Coolify.
+- `site/deployment/gcs-public.caddy.fragment`: reviewed but unactivated public route template.
 - `site/acceptance/smoke.py`: canonical HTTPS page and accessibility-structure checks, not evidence of successful release until executed against the real public host.
 - `docs/comparator-contract.md`: UK product and UH editorial constraints.
 
