@@ -60,7 +60,9 @@ if docker ps --format '{{.Names}}' | grep -Fxq 'uh-gcs-professional-database-1';
   sha256sum "$BACKUP" >"$BACKUP.sha256"
 fi
 "${COMPOSE[@]}" build
-"${COMPOSE[@]}" up -d --no-build --wait --wait-timeout 180
+# WordPress base image declares an anonymous /var/www/html volume. Renew it on each immutable release
+# so PHP, themes and plugins match the approved source SHA; the database and uploads use named volumes.
+"${COMPOSE[@]}" up -d --no-build --renew-anon-volumes --wait --wait-timeout 180
 docker image inspect "uh/gcs-professional:$SHA" --format '{{.Id}}' >"$STATE_DIR/image-id"
 printf '%s\n' "$SHA" >"$STATE_DIR/installed-source-sha"
 chmod 0600 "$STATE_DIR/"*
