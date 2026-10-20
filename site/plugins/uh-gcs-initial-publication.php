@@ -104,12 +104,35 @@ HTML],
 <p>Accessibility assessment is an ongoing responsibility. The publishing team must test new content, forms, media and document formats before release and address any barriers discovered.</p>
 <h2>Reporting a problem</h2><p>Use the <a href="/contact/">contact guidance</a> to raise an accessibility issue with the responsible Government Communication Service team.</p>
 HTML],
-        'privacy' => ['Privacy and cookies', <<<'HTML'
-<p>This website is published for the Government Communication Service and hosted within the authorised United Hampshire digital estate.</p>
-<h2>Information about visits</h2><p>Web server records may include technical details needed to provide, protect and maintain the site. Do not provide personal or sensitive information through ordinary website search.</p>
-<h2>Cookies</h2><p>WordPress authentication cookies are used when authorised publishers sign in to the content management system. Public information pages do not require a WordPress account. The site does not intentionally use advertising or third-party analytics cookies.</p>
-<h2>Professional membership and recruitment</h2><p>Membership decisions and recruitment processes belong to their responsible systems. This public website does not independently process membership applications or job applications.</p>
-<h2>More information</h2><p>See the responsible <a href="https://www.gov.uhrblx.com/government/organisations/government-communication-service">GCS organisation profile</a> and <a href="https://www.gov.uhrblx.com/">GOV.UH</a> information-rights publications.</p>
+        'privacy' => ['Privacy notice', <<<'HTML'
+<p>The Government Communication Service is part of the Cabinet Office. The Cabinet Office is responsible for the personal information processed to run this website and administer the Service. Other government departments and public bodies remain responsible for information collected through their own services.</p>
+<h2>Information about visits</h2>
+<p>Technical records may include your IP address, the pages requested, browser details and the time of a request. This information is used to provide, protect and maintain the website. Avoid including personal information in website searches.</p>
+<h2>Authorised publishers</h2>
+<p>The website processes account and authentication information needed to allow authorised publishers to maintain its content and protect access to the publishing system.</p>
+<h2>Cookies</h2>
+<p>You can read the public website without signing in. The website does not use advertising or optional web analytics cookies. Essential cookies are used when authorised publishers sign in. Read <a href="/cookies/">how this website uses cookies</a>.</p>
+<h2>Professional membership and recruitment</h2>
+<p>The responsible organisation handles information submitted through its own membership or recruitment process. This website does not receive applications for either service.</p>
+<h2>Enquiries and information rights</h2>
+<p>For enquiries about the Government Communication Service's use of information, see <a href="/contact/">contact Government Communications</a>. For information submitted to another department or public body, contact that organisation using its own privacy notice.</p>
+HTML],
+        'cookies' => ['Cookies', <<<'HTML'
+<p>Cookies are small files stored on your computer, tablet or phone. This page explains the cookies used on the Government Communications website.</p>
+<h2>Public pages</h2>
+<p>You can read public information and search publications without signing in. The site does not use advertising or optional web analytics cookies.</p>
+<h2>Cookies used by publishers</h2>
+<p>Essential cookies are used when authorised publishers sign in to manage the website.</p>
+<table><thead><tr><th>Cookie</th><th>Purpose</th><th>Expiry</th></tr></thead><tbody>
+<tr><td>wordpress_test_cookie</td><td>Checks whether a browser accepts cookies</td><td>Browser session</td></tr>
+<tr><td>wordpress_logged_in_*</td><td>Recognises a signed-in publisher</td><td>Until sign-out or the authentication period ends</td></tr>
+<tr><td>wordpress_sec_*</td><td>Protects authenticated access to administration</td><td>Until sign-out or the authentication period ends</td></tr>
+<tr><td>wp-settings-* and wp-settings-time-*</td><td>Remember publishing interface preferences</td><td>Up to 1 year</td></tr>
+</tbody></table>
+<h2>Managing cookies</h2>
+<p>There are no optional cookie categories on the public pages. You can block or delete cookies through your browser settings, but blocking essential sign-in cookies will prevent publishers from using administration.</p>
+<h2>Other websites</h2>
+<p>Services reached through links from this website may use their own cookies. Refer to the cookies information for those services.</p>
 HTML],
         'news' => ['News', '']
     ];
