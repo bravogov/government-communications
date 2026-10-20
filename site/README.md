@@ -2,7 +2,7 @@
 
 **Institution:** Government Communication Service (GCS), part of the Civil Service.
 **Professional leadership:** Cabinet Office.
-**Public hostname:** `gcs.civilservice.gov.uhrblx.com`.
+**Public hostname:** `www.communications.gov.uhrblx.com`.
 **UK functional comparator:** `https://www.communications.gov.uk/` (successor to `gcs.civilservice.gov.uk`).
 **Product:** Independent professional-information website. The GOV.UH organisation record remains the authoritative central government organisation profile.
 
