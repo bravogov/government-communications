@@ -34,8 +34,8 @@ services:
       WORDPRESS_CONFIG_EXTRA: |
         // Temporary compatibility while the OVH secondary nameserver transfers the new address.
         // This strictly allowlists the former GCS host; all other requests use the new canonical host.
-        define('WP_HOME', (isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST'] === 'gcs.civilservice.gov.uhrblx.com') ? 'https://gcs.civilservice.gov.uhrblx.com' : 'https://www.communications.gov.uhrblx.com');
-        define('WP_SITEURL', (isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST'] === 'gcs.civilservice.gov.uhrblx.com') ? 'https://gcs.civilservice.gov.uhrblx.com' : 'https://www.communications.gov.uhrblx.com');
+        define('WP_HOME', (filter_input(INPUT_SERVER, 'HTTP_HOST') === 'gcs.civilservice.gov.uhrblx.com') ? 'https://gcs.civilservice.gov.uhrblx.com' : 'https://www.communications.gov.uhrblx.com');
+        define('WP_SITEURL', (filter_input(INPUT_SERVER, 'HTTP_HOST') === 'gcs.civilservice.gov.uhrblx.com') ? 'https://gcs.civilservice.gov.uhrblx.com' : 'https://www.communications.gov.uhrblx.com');
         define('DISALLOW_FILE_EDIT', true);
         define('DISALLOW_FILE_MODS', true);
         define('WP_AUTO_UPDATE_CORE', false);
