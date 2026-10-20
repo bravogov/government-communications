@@ -1,9 +1,9 @@
 /*
 Theme Name: UH Government Communications
-Theme URI: https://gcs.civilservice.gov.uhrblx.com/
+Theme URI: https://www.communications.gov.uhrblx.com/
 Author: United Hampshire Cabinet Office
 Description: The Government Communication Service professional publishing theme.
-Version: 1.0.0
+Version: 2.0.0
 Text Domain: uh-gcs
 */
 :root{--ink:#101820;--muted:#4d5664;--navy:#142942;--blue:#005ea5;--pale:#eef5f9;--line:#d8dce0;--focus:#ffdd00;--white:#fff;}
@@ -11,3 +11,140 @@ Text Domain: uh-gcs
 
 /* Native searchable publication index */
 .filters{margin:34px 0 18px;padding:26px;background:#edf3f7;border-left:5px solid #005ea5}.filter-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px;margin-bottom:20px}.filters label{display:block;font-weight:700;font-size:16px;margin-bottom:7px}.filters input,.filters select{display:block;width:100%;height:44px;padding:8px;border:2px solid #27394b;background:#fff;font:inherit;font-size:16px}.filters .reset{margin-left:18px;font-weight:700}.results-count{font-weight:700;margin-top:32px}.publications-list h2{margin:0 0 10px;font-size:24px}.page-numbers{display:flex;gap:10px;list-style:none;padding:20px 0 40px}.page-numbers a,.page-numbers .current{display:inline-block;padding:6px 12px;border:1px solid #b1bdc9}.page-numbers .current{background:#1b3d5b;color:#fff;border-color:#1b3d5b}@media(max-width:800px){.filter-grid{grid-template-columns:1fr}}
+
+/* Government Communications website: UK-comparator editorial presentation. */
+:root{--gc-black:#08090a;--gc-navy:#06184b;--gc-ink:#171c27;--gc-blue:#154a98;--gc-cream:#f4f7fa}
+.gc-container{max-width:1240px;width:calc(100% - 64px);margin-inline:auto}
+.gc-header{position:relative;background:#050505;color:#fff;z-index:15}
+.gc-header-inner{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.gc-brand{display:inline-flex;gap:10px;align-items:center;min-width:0;color:#fff;text-decoration:none;font-weight:500;font-size:22px;line-height:1.2;letter-spacing:-.6px}
+.gc-brand:hover{color:#fff;text-decoration:underline;text-underline-offset:6px}
+.gc-brand-name{display:block;border-left:2px solid #fff;padding:3px 0 3px 11px;white-space:nowrap}
+.gc-crown{display:block;object-fit:contain;width:37px;height:40px;filter:brightness(0) invert(1)}
+.gc-controls{display:flex;align-items:stretch;gap:0;margin-left:auto;min-height:50px}
+.gc-pop{position:relative}
+.gc-pop>summary{list-style:none;display:flex;align-items:center;gap:13px;height:100%;cursor:pointer;color:#fff;font-size:16px;font-weight:600;padding:0 21px}
+.gc-pop>summary::-webkit-details-marker{display:none}
+.gc-pop>summary:hover,.gc-sign-in:hover{background:#252525;color:#fff}
+.gc-pop>summary:focus-visible,.gc-sign-in:focus-visible{outline:3px solid #ffdd00;outline-offset:-3px}
+.gc-pop[open]>summary{background:#222}
+.gc-menu>summary{min-width:107px;justify-content:center}
+.gc-search-toggle>summary{border-left:1px solid #aaa;border-right:1px solid #aaa;min-width:68px;justify-content:center}
+.gc-sign-in{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-size:16px;font-weight:600;padding:0 23px}
+.gc-pop-panel{position:absolute;right:0;top:100%;z-index:50;background:#121212;color:#fff;box-shadow:0 9px 24px #0005;border:1px solid #484848}
+.gc-menu-panel{width:340px}
+.gc-menu-panel .nav{background:transparent}
+.gc-menu-panel .nav .wrap{width:100%;max-width:none}
+.gc-menu-panel .nav ul{display:block}
+.gc-menu-panel .nav li{border-bottom:1px solid #3c3c3c}
+.gc-menu-panel .nav a,.gc-extra-links a{display:block;text-decoration:none;color:#fff;padding:15px 22px;font-size:16px;font-weight:600}
+.gc-menu-panel .nav a:hover,.gc-extra-links a:hover{background:#323232;box-shadow:none}
+.gc-extra-links{display:grid}
+.gc-search-panel{width:min(465px,calc(100vw - 28px));padding:22px 25px}
+.gc-search-form label{display:block;font-weight:700;margin-bottom:9px;color:#fff}
+.gc-search-form>div{display:flex}
+.gc-search-form input{min-width:0;flex:1;border:2px solid #fff;padding:9px 12px;font-size:17px}
+.gc-search-form button{padding:10px 17px;background:#2d6bb3;border:0;color:#fff;font-weight:700;cursor:pointer}
+.gc-header button:focus,.gc-header input:focus{outline:3px solid #ffdd00;outline-offset:2px}
+.gc-home h1,.gc-home h2,.gc-home h3,.gc-home p{letter-spacing:normal}
+.gc-hero{position:relative;height:555px;overflow:hidden;background:#e4ecf6}
+.gc-hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 41%;filter:grayscale(1)}
+.gc-hero-fade{position:absolute;inset:0;background:linear-gradient(90deg,#eef4fc 0%,#eef4fc 12%,rgba(238,244,252,.98) 23%,rgba(238,244,252,.84) 36%,rgba(238,244,252,.2) 61%,rgba(0,0,0,.21) 100%)}
+.gc-hero-content{position:relative;height:100%;display:flex;align-items:center;padding-left:110px}
+.gc-hero h1{font-size:clamp(38px,3.05vw,49px);color:var(--gc-navy);line-height:1.11;letter-spacing:-1.3px;font-weight:750;margin:0;max-width:560px}
+.gc-intro{display:grid;grid-template-columns:1fr 1fr;min-height:350px;background:#070707}
+.gc-intro-image{position:relative;overflow:hidden;min-height:350px}
+.gc-intro-image img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:50% 48%}
+.gc-intro-copy{padding:51px clamp(35px,5vw,90px);display:flex;flex-direction:column;justify-content:center;color:#fff}
+.gc-intro-copy h2{font-size:clamp(26px,2.1vw,34px);line-height:1.22;color:#fff;font-weight:750}
+.gc-intro-copy p{max-width:540px;font-size:18px;line-height:1.5;color:#fff}
+.gc-on-dark{color:#fff;font-weight:700;font-size:17px;text-decoration-thickness:2px}
+.gc-text-link span,.gc-feature-copy a span,.gc-featured-more span{margin-left:8px}
+.gc-section{padding:72px 0 85px}
+.gc-home .gc-section h2{font-size:clamp(29px,3vw,40px);line-height:1.14;font-weight:750;margin:0 0 36px;color:#08090a}
+.gc-quicklinks{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}
+.gc-quicklinks a{display:flex;flex-direction:column;position:relative;min-height:185px;padding:22px 16px 20px;border-top:5px solid #091639;background:#f5f6f7;color:#111823;text-decoration:none}
+.gc-quicklinks strong{font-size:24px;line-height:1.2;margin-bottom:13px;color:#091639}
+.gc-quicklinks span{font-size:16px;line-height:1.4;max-width:215px}
+.gc-quicklinks b{font-size:22px;position:absolute;right:13px;top:18px}
+.gc-quicklinks a:hover{box-shadow:0 0 0 3px #192e56 inset;text-decoration:underline;text-underline-offset:4px}
+.gc-feature{min-height:470px;display:grid;grid-template-columns:1fr 1fr}
+.gc-feature-image{min-height:430px;position:relative;overflow:hidden}
+.gc-feature-image img{height:100%;width:100%;position:absolute;inset:0;object-fit:cover}
+.gc-feature-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:65px clamp(30px,6vw,110px)}
+.gc-feature-copy blockquote{font-size:clamp(27px,2.4vw,40px);line-height:1.33;font-weight:650;margin:0 0 34px;border:0}
+.gc-feature-copy a{font-size:18px;font-weight:700;text-underline-offset:5px}
+.gc-feature-dark{background:#070707;color:#fff}
+.gc-feature-dark a{color:#fff}
+.gc-feature-light{background:#eef2f5;color:#101721}
+.gc-feature-light a{color:#0a356c}
+.gc-feature-blue{background:#082353;color:#fff}
+.gc-feature-blue a{color:#fff}
+.gc-featured{background:#fff}
+.gc-featured-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.gc-featured-card{padding:25px 25px 29px;background:#f4f5f7;border-top:5px solid #111}
+.gc-kicker{font-size:14px;font-weight:700;letter-spacing:.3px;color:#465263}
+.gc-featured-card h3{font-size:clamp(20px,1.8vw,26px);line-height:1.25;margin:14px 0 11px}
+.gc-featured-card h3 a{color:#0a255b}
+.gc-featured-card p{font-size:17px;color:#2d3440}
+.gc-featured-more{margin-top:37px;font-weight:700}
+.gc-bottom-link{background:#0d2145;color:#fff;padding:58px 0 70px}
+.gc-bottom-link h2{color:#fff;font-size:37px;line-height:1.18;margin-bottom:20px}
+.gc-bottom-link p{color:#fff;font-size:19px;max-width:760px}
+.gc-button{display:inline-block;padding:13px 23px;background:#fff;color:#102454;font-weight:700;text-decoration:none;border-radius:0}
+.gc-button:hover{background:#e6edfa;color:#102454}
+.gc-home+.footer{border-top:0}
+.footer{background:#f1f2f4;border-top:6px solid #111;padding-top:52px}
+.footer h2{font-size:21px}
+.footer .smallprint{max-width:none}
+.content-grid .article,.article{font-size:18px}
+.content-grid .article h2{color:#111a2c}
+.page-title{font-size:clamp(36px,4vw,52px);letter-spacing:-1px}
+@media (max-width:1100px){
+ .gc-hero-content{padding-left:45px}
+ .gc-quicklinks{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .gc-quicklinks a{min-height:156px}
+}
+@media (max-width:800px){
+ .gc-container{width:calc(100% - 36px)}
+ .gc-header-inner{min-height:65px}
+ .gc-brand{font-size:17px}
+ .gc-brand-name{white-space:normal}
+ .gc-crown{width:31px;height:32px}
+ .gc-pop>summary{padding:0 12px}
+ .gc-search-toggle>summary{min-width:46px}
+ .gc-sign-in{padding:0 10px}
+ .gc-hero{height:490px}
+ .gc-hero h1{font-size:clamp(33px,6.3vw,46px)}
+ .gc-hero-content{padding-left:0}
+ .gc-hero-fade{background:linear-gradient(90deg,rgba(238,244,252,.99),rgba(238,244,252,.94) 30%,rgba(238,244,252,.55) 67%,rgba(238,244,252,.16))}
+ .gc-intro,.gc-feature{grid-template-columns:1fr}
+ .gc-intro-image,.gc-feature-image{min-height:290px}
+ .gc-feature-reverse .gc-feature-copy{order:2}
+ .gc-feature-reverse .gc-feature-image{order:1}
+ .gc-intro-copy,.gc-feature-copy{padding:40px 28px}
+ .gc-featured-grid{grid-template-columns:1fr}
+ .gc-featured-card{min-height:155px}
+ .gc-section{padding:48px 0 55px}
+}
+@media (max-width:520px){
+ .gc-brand{font-size:15px;gap:6px}
+ .gc-brand-name{padding-left:7px}
+ .gc-header-inner{width:calc(100% - 20px);gap:8px}
+ .gc-crown{width:26px}
+ .gc-controls{min-height:56px}
+ .gc-menu>summary{min-width:53px;font-size:13px;gap:3px;padding:0 5px}
+ .gc-menu>summary svg{width:13px}
+ .gc-sign-in{gap:0;padding:0 8px}
+ .gc-sign-in span{position:absolute;left:-10000px}
+ .gc-search-toggle>summary{padding:0 8px;min-width:37px}
+ .gc-menu-panel{width:min(320px,calc(100vw - 24px))}
+ .gc-hero{height:450px}
+ .gc-hero-image{object-position:58% 48%}
+ .gc-hero h1{font-size:35px}
+ .gc-quicklinks{grid-template-columns:1fr;gap:12px}
+ .gc-quicklinks a{min-height:100px}
+ .gc-quicklinks strong{margin-bottom:8px}
+ .gc-bottom-link h2{font-size:30px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
