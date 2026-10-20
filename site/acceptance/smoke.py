@@ -6,9 +6,9 @@ from html.parser import HTMLParser
 import ssl
 import sys
 
-BASE = "https://gcs.civilservice.gov.uhrblx.com"
+BASE = "https://www.communications.gov.uhrblx.com"
 PATHS = [
-    ("/", "The professional body for government communicators"),
+    ("/", "The professional"),
     ("/about/", "Government Communication Service"),
     ("/membership/", "professional community"),
     ("/careers/", "Civil Service Jobs"),
@@ -17,7 +17,8 @@ PATHS = [
     ("/resources/", "Resources and guidance"),
     ("/contact/", "Contact Government Communications"),
     ("/accessibility/", "Accessibility statement"),
-    ("/privacy/", "Privacy and cookies"),
+    ("/privacy/", "Privacy notice"),
+    ("/cookies/", "Cookies"),
     ("/publication/communication-planning/", "Communication planning"),
     ("/publication/evaluating-communications/", "Evaluating communications"),
     ("/publication/accessible-communications/", "Accessible communication"),
