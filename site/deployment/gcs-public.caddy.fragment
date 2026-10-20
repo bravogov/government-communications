@@ -1,6 +1,11 @@
-# Not enabled automatically: activate only after private installation, content approval,
-# authoritative DNS agreement, Caddy validation and HTTPS acceptance.
-gcs.civilservice.gov.uhrblx.com {
+# Government Communications — existing native UH Caddy edge and loopback WordPress release.
+www.communications.gov.uhrblx.com {
   import common
   reverse_proxy 127.0.0.1:45836
+}
+communications.gov.uhrblx.com {
+  redir https://www.communications.gov.uhrblx.com{uri} 308
+}
+gcs.civilservice.gov.uhrblx.com {
+  redir https://www.communications.gov.uhrblx.com{uri} 308
 }
